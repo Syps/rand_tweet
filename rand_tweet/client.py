@@ -33,9 +33,7 @@ class Client(object):
         except HTTPError:
             raise ClientException
 
-        servecr_data = res.read().decode('utf-8')
-        data = json.loads(server_data)
-        print data
+        data = self._get_json_obj(res)
         return data
 
     def _get_token(self):
@@ -51,6 +49,10 @@ class Client(object):
         req.data = request_data
 
         res = urlopen(req)
+        data = self._get_json_obj(res)
+        return data['access_token']
+
+    def _get_json_obj(self, res):
         server_data = res.read().decode('utf-8')
         data = json.loads(server_data)
-        return data['access_token']
+        return data

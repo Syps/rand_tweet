@@ -1,2 +1,5 @@
-KEY = 'srlIdoxH2uEVar4w82UWHHdmK'
-SECRET = 'FhrZ2Kq9oSNbb7HShHHayUDXFl5bwqAuPhiBs3czUYbhijCtXT'
+"""
+Enter your consumer key and secret here
+"""
+KEY = ''
+SECRET = ''
