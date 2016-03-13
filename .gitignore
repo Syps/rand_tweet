@@ -1,1 +1,3 @@
-*.pyc
+/*.pyc
+rand_tweet/*.pyc
+tests/*.pyc

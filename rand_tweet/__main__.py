@@ -8,7 +8,6 @@ def build_query_param():
 
 client = Client(config.KEY, config.SECRET)
 
-# query = build_query_param(argv[1:])
 query = build_query_param()
 url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + query + 'lang%3Aen&src=typd'
 tweets = client.req(url)
