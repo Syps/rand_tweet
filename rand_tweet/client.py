@@ -33,8 +33,7 @@ class Client(object):
         except HTTPError:
             raise ClientException
 
-        data = self._get_json_obj(res)
-        return data
+        return self._get_json_obj(res)
 
     def _get_token(self):
         bearer_token = '%s:%s' % (self.key, self.secret)
